@@ -1,4 +1,4 @@
-package com.example.kotlincomposefirstapp.movies.views
+package com.example.kotlincomposefirstapp.wizards.views
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -11,7 +11,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import coil.compose.rememberAsyncImagePainter
-import com.example.kotlincomposefirstapp.movies.viewmodels.WizardViewModel
+import com.example.kotlincomposefirstapp.wizards.viewmodels.WizardViewModel
 
 @Composable
 fun DetailWizardScreen(

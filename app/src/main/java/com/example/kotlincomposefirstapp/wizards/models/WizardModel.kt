@@ -1,4 +1,4 @@
-package com.example.kotlincomposefirstapp.movies.models
+package com.example.kotlincomposefirstapp.wizards.models
 
 import com.fasterxml.jackson.annotation.JsonProperty
 

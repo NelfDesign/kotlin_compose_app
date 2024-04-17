@@ -5,14 +5,14 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.kotlincomposefirstapp.movies.viewmodels.WizardViewModel
-import com.example.kotlincomposefirstapp.movies.views.DetailWizardScreen
-import com.example.kotlincomposefirstapp.movies.views.MoviesScreen
 import com.example.kotlincomposefirstapp.navigation.BottomBarScreen
 import com.example.kotlincomposefirstapp.navigation.Graph
 import com.example.kotlincomposefirstapp.randomUser.viewmodels.UserViewModel
 import com.example.kotlincomposefirstapp.randomUser.views.DetailUserScreen
 import com.example.kotlincomposefirstapp.randomUser.views.HomeScreenView
+import com.example.kotlincomposefirstapp.wizards.viewmodels.SpellViewModel
+import com.example.kotlincomposefirstapp.wizards.viewmodels.WizardViewModel
+import com.example.kotlincomposefirstapp.wizards.views.WizardsScreen
 
 @Composable
 fun HomeNavGraph(
@@ -20,6 +20,7 @@ fun HomeNavGraph(
 ) {
     val userViewModel: UserViewModel = viewModel()
     val wizardViewModel: WizardViewModel = viewModel()
+    val spellViewModel: SpellViewModel = viewModel()
 
     NavHost(
         navController = navController,
@@ -34,24 +35,27 @@ fun HomeNavGraph(
                 userViewModel = userViewModel
             )
         }
-        composable(route = BottomBarScreen.Movies.route) {
-            MoviesScreen(
-                onClickItem = {
-                    navController.navigate(route = DetailsScreen.WizardDetail.route)
+        composable(route = BottomBarScreen.Wizards.route) {
+            WizardsScreen(
+                onClickWizards = {
+                    navController.navigate(route = DetailsWizardsScreen.WizardList.route)
                 },
-                wizardViewModel = wizardViewModel
+                onClickSpells = {
+                    navController.navigate(route = DetailsWizardsScreen.SpellsList.route)
+                }
             )
         }
         composable(route = DetailsScreen.Detail.route) {
             DetailUserScreen(userViewModel = userViewModel)
         }
-        composable(route = DetailsScreen.WizardDetail.route) {
-            DetailWizardScreen(wizardViewModel = wizardViewModel)
-        }
+        wizardsNavGraph(
+            navController = navController,
+            wizardViewModel = wizardViewModel,
+            spellViewModel = spellViewModel
+        )
     }
 }
 
 sealed class DetailsScreen(val route: String) {
     data object Detail : DetailsScreen(route = "DETAIL-USER")
-    data object WizardDetail : DetailsScreen(route = "DETAIL-WIZARD")
 }

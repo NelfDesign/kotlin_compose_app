@@ -1,4 +1,4 @@
-package com.example.kotlincomposefirstapp.movies.views
+package com.example.kotlincomposefirstapp.wizards.views
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -11,17 +11,17 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.kotlincomposefirstapp.movies.viewmodels.MoviesApiViewModel
-import com.example.kotlincomposefirstapp.movies.viewmodels.WizardViewModel
+import com.example.kotlincomposefirstapp.wizards.viewmodels.SpellViewModel
+import com.example.kotlincomposefirstapp.wizards.viewmodels.SpellsViewModel
 
 @Composable
-fun MoviesScreen(
-    viewModel: MoviesApiViewModel = viewModel(),
-    wizardViewModel: WizardViewModel,
+fun SpellsListView(
+    viewModel: SpellsViewModel = viewModel(),
+    spellViewModel: SpellViewModel,
     onClickItem: () -> Unit,
 ) {
-    val state = viewModel.moviesState.collectAsState()
-    val wizards = state.value.movies
+    val state = viewModel.spellsState.collectAsState()
+    val spells = state.value.spells
 
     Box(
         modifier = Modifier
@@ -32,9 +32,9 @@ fun MoviesScreen(
             columns = GridCells.Fixed(2),
             horizontalArrangement = Arrangement.spacedBy(4.dp),
             content = {
-                items(wizards.size) { item ->
-                    WizardItem(wizard = wizards[item], onClick = {
-                        wizardViewModel.addWizard(wizards[item])
+                items(spells.size) { item ->
+                    SpellItem(spell = spells[item], onClick = {
+                        spellViewModel.addSpell(spells[item])
                         onClickItem()
                     })
                 }

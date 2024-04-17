@@ -16,13 +16,11 @@ fun RootNavigationGraph(navController: NavHostController) {
         composable(route = Graph.HOME) {
             HomeScreen()
         }
-
     }
 }
 
 object Graph {
     const val ROOT = "root_graph"
     const val HOME = "home_graph"
-    const val NEWS = "news_graph"
-    const val MOVIES = "movies_graph"
+    const val WIZARDS = "wizards_graph"
 }

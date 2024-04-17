@@ -16,9 +16,9 @@ sealed class BottomBarScreen(
         icon = Icons.Default.Home
     )
 
-    data object Movies : BottomBarScreen(
-        route = "movies",
-        title = "Movies",
+    data object Wizards : BottomBarScreen(
+        route = "wizards",
+        title = "Wizards",
         icon = Icons.Default.Movie
     )
 }

@@ -1,4 +1,4 @@
-package com.example.kotlincomposefirstapp.movies.views
+package com.example.kotlincomposefirstapp.wizards.views
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -19,7 +19,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
-import com.example.kotlincomposefirstapp.movies.models.Wizard
+import com.example.kotlincomposefirstapp.wizards.models.Wizard
 
 @Composable
 fun WizardItem(wizard: Wizard, onClick: () -> Unit = {}) {

@@ -1,20 +1,20 @@
-package com.example.kotlincomposefirstapp.movies.viewmodels
+package com.example.kotlincomposefirstapp.wizards.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.kotlincomposefirstapp.movies.models.Wizard
-import com.example.kotlincomposefirstapp.movies.repositories.MoviesRepository
+import com.example.kotlincomposefirstapp.wizards.models.Wizard
+import com.example.kotlincomposefirstapp.wizards.repositories.WizardsRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-class MoviesApiViewModel : ViewModel() {
+class WizardsApiViewModel : ViewModel() {
     // UI state exposed to the UI
-    private val _moviesState = MutableStateFlow(MoviesViewModelUiState())
-    private val repository = MoviesRepository()
+    private val _wizardsState = MutableStateFlow(WizardsViewModelUiState())
+    private val repository = WizardsRepository()
     // Backing property to avoid state updates from other classes
-    val moviesState: StateFlow<MoviesViewModelUiState> = _moviesState.asStateFlow()
+    val wizardState : StateFlow<WizardsViewModelUiState> = _wizardsState.asStateFlow()
 
     init {
         launchAPI()
@@ -24,11 +24,11 @@ class MoviesApiViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 val result = repository.getAllCharacters()
-                _moviesState.value = MoviesViewModelUiState(
+                _wizardsState.value = WizardsViewModelUiState(
                     movies = result
                 )
             } catch (e: Exception) {
-                _moviesState.value = MoviesViewModelUiState(
+                _wizardsState.value = WizardsViewModelUiState(
                     error = e.message
                 )
             }
@@ -36,7 +36,7 @@ class MoviesApiViewModel : ViewModel() {
     }
 }
 
-data class MoviesViewModelUiState(
+data class WizardsViewModelUiState(
     val movies: List<Wizard> = emptyList(),
     val loading: Boolean = false,
     val error: String? = null
