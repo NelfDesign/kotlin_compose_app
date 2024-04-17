@@ -1,6 +1,6 @@
-package com.example.kotlincomposefirstapp.api_service
+package com.example.kotlincomposefirstapp.randomUser.api_service
 
-import com.example.kotlincomposefirstapp.models.APIResults
+import com.example.kotlincomposefirstapp.randomUser.models.APIResults
 import retrofit2.http.GET
 import retrofit2.http.Query
 

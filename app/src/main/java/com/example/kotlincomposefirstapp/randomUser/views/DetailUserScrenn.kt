@@ -1,4 +1,4 @@
-package com.example.kotlincomposefirstapp.views
+package com.example.kotlincomposefirstapp.randomUser.views
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -21,8 +21,8 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
-import com.example.kotlincomposefirstapp.models.User
-import com.example.kotlincomposefirstapp.viewmodels.UserViewModel
+import com.example.kotlincomposefirstapp.randomUser.models.User
+import com.example.kotlincomposefirstapp.randomUser.viewmodels.UserViewModel
 
 @Composable
 fun DetailUserScreen(

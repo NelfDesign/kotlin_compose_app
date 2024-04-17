@@ -1,4 +1,4 @@
-package com.example.kotlincomposefirstapp.api_service
+package com.example.kotlincomposefirstapp.randomUser.api_service
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

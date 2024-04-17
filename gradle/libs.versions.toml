@@ -13,6 +13,7 @@ coil = "2.6.0"
 viewmodel = "2.7.0"
 parcelize = "1.8.10"
 navigation = "2.7.7"
+json = "2.17.+"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -35,9 +36,9 @@ retrofit = {group = "com.squareup.retrofit2", name = "retrofit", version.ref = "
 retrofit-converter = {group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit"}
 coil = {group = "io.coil-kt", name = "coil-compose", version.ref = "coil"}
 navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation"}
+json-annotation = { group = "com.fasterxml.jackson.module", name = "jackson-module-kotlin", version.ref = "json"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize",  version.ref = "parcelize"  }
 

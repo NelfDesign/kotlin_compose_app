@@ -1,6 +1,4 @@
-package com.example.kotlincomposefirstapp.models
-
-import kotlinx.parcelize.RawValue
+package com.example.kotlincomposefirstapp.randomUser.models
 
 data class APIResults(val results: List<User>)
 
@@ -27,7 +25,7 @@ data class Location(
     val city: String,
     val state: String,
     val country: String,
-    val postcode: @RawValue Any,
+    val postcode: String,
     val coordinates: Coordinates,
     val timezone: Timezone
 )

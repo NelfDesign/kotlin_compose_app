@@ -1,4 +1,4 @@
-package com.example.kotlincomposefirstapp.views
+package com.example.kotlincomposefirstapp.randomUser.views
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -17,7 +17,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
-import com.example.kotlincomposefirstapp.models.User
+import com.example.kotlincomposefirstapp.randomUser.models.User
 
 @Composable
 fun UserItem(

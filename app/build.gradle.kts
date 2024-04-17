@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {
@@ -72,6 +71,8 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel)
     // navigation
     implementation(libs.navigation)
+    // json annotation
+    implementation(libs.json.annotation)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

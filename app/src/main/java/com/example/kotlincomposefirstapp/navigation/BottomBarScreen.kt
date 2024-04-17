@@ -3,7 +3,6 @@ package com.example.kotlincomposefirstapp.navigation
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Movie
-import androidx.compose.material.icons.filled.Newspaper
 import androidx.compose.ui.graphics.vector.ImageVector
 
 sealed class BottomBarScreen(
@@ -15,12 +14,6 @@ sealed class BottomBarScreen(
         route = "home",
         title = "Home",
         icon = Icons.Default.Home
-    )
-
-    data object News : BottomBarScreen(
-        route = "news",
-        title = "News",
-        icon = Icons.Default.Newspaper
     )
 
     data object Movies : BottomBarScreen(

@@ -1,8 +1,9 @@
-package com.example.kotlincomposefirstapp.viewmodels
+package com.example.kotlincomposefirstapp.randomUser.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.kotlincomposefirstapp.models.User
+import com.example.kotlincomposefirstapp.randomUser.models.User
+import com.example.kotlincomposefirstapp.randomUser.repositories.Repository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -22,9 +23,7 @@ class APIViewModel: ViewModel() {
     private fun launchAPI() {
         viewModelScope.launch {
             try {
-                println("ici")
                 val result = repository.getUserList()
-                println("val = ${result}")
                _uiState.value = ApiViewModelUiState(
                     users = result.results
                 )

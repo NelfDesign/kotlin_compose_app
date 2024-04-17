@@ -1,4 +1,4 @@
-package com.example.kotlincomposefirstapp.views
+package com.example.kotlincomposefirstapp.randomUser.views
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -16,9 +16,9 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.kotlincomposefirstapp.navigation.BottomBar
-import com.example.kotlincomposefirstapp.navigation.HomeNavGraph
-import com.example.kotlincomposefirstapp.viewmodels.APIViewModel
-import com.example.kotlincomposefirstapp.viewmodels.UserViewModel
+import com.example.kotlincomposefirstapp.navigation.navgraph.HomeNavGraph
+import com.example.kotlincomposefirstapp.randomUser.viewmodels.APIViewModel
+import com.example.kotlincomposefirstapp.randomUser.viewmodels.UserViewModel
 
 @Composable
 fun HomeScreen(navController: NavHostController = rememberNavController()) {
