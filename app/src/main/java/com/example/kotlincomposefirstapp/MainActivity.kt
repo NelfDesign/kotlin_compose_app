@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.compose.rememberNavController
 import com.example.kotlincomposefirstapp.navigation.RootNavigationGraph
 import com.example.kotlincomposefirstapp.ui.theme.KotlinComposeFirstAppTheme
@@ -11,6 +12,7 @@ import com.example.kotlincomposefirstapp.ui.theme.KotlinComposeFirstAppTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        installSplashScreen()
         setContent {
            KotlinComposeFirstApp()
         }

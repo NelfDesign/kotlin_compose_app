@@ -9,6 +9,6 @@ import retrofit2.http.Query
 interface APIService {
     @GET("api/")
     suspend fun getRandomUsers(
-        @Query("results") results: String = "50"
+        @Query("results") results: String = "25"
     ) : APIResults
 }

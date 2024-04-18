@@ -11,9 +11,9 @@ composeBom = "2024.04.00"
 retrofit = "2.9.0"
 coil = "2.6.0"
 viewmodel = "2.7.0"
-parcelize = "1.8.10"
 navigation = "2.7.7"
 json = "2.17.+"
+splash = "1.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -37,6 +37,7 @@ retrofit-converter = {group = "com.squareup.retrofit2", name = "converter-gson",
 coil = {group = "io.coil-kt", name = "coil-compose", version.ref = "coil"}
 navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation"}
 json-annotation = { group = "com.fasterxml.jackson.module", name = "jackson-module-kotlin", version.ref = "json"}
+splash = { group = "androidx.core", name = "core-splashscreen", version.ref = "splash"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

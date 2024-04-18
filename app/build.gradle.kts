@@ -73,6 +73,8 @@ dependencies {
     implementation(libs.navigation)
     // json annotation
     implementation(libs.json.annotation)
+    // SplashSceen
+    implementation(libs.splash)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
