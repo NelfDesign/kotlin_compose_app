@@ -1,4 +1,4 @@
-First app with JettPack Compose.
+First app with JetPack Compose.
 
 Packages:
 - Material 3
